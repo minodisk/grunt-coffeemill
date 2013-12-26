@@ -1,6 +1,6 @@
 var CoffeeMill;
 
-CoffeeMill = require('../../coffeemill/lib/coffeemill').CoffeeMill;
+CoffeeMill = require('coffeemill').CoffeeMill;
 
 console.log(CoffeeMill);
 
