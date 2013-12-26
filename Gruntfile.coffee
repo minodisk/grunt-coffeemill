@@ -52,5 +52,5 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'run', [ 'coffee:compile', 'simplemocha', 'clean' ]
   grunt.registerTask 'update', ->
-    spawn 'npm', [ 'update', 'coffeemill', '--save-dev' ]
+    spawn 'npm', [ 'update', 'coffeemill', '--save' ]
   grunt.registerTask 'default', [ 'run', 'watch' ]
