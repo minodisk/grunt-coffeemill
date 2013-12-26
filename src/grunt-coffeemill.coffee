@@ -1,6 +1,4 @@
-{CoffeeMill} = require 'coffeemill'
-
-console.log CoffeeMill
+{ CoffeeMill } = require 'coffeemill'
 
 module.exports = (grunt) ->
   grunt.registerMultiTask 'coffeemill', 'coffemill task', ->

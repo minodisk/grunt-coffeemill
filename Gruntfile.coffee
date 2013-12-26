@@ -1,3 +1,5 @@
+{ spawn } = require 'child_process'
+
 module.exports = (grunt) ->
   grunt.initConfig
 
@@ -41,6 +43,7 @@ module.exports = (grunt) ->
     clean:
       tests: [ 'tests/**/*_tests.js' ]
 
+
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-clean'
@@ -48,4 +51,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-release'
 
   grunt.registerTask 'run', [ 'coffee:compile', 'simplemocha', 'clean' ]
+  grunt.registerTask 'update', ->
+    spawn 'npm', [ 'update', 'coffeemill', '--save-dev' ]
   grunt.registerTask 'default', [ 'run', 'watch' ]
