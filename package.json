@@ -22,9 +22,8 @@
   },
   "license": "MIT",
   "bin": {
-    "coffeemill": "./bin/coffeemill"
   },
-  "main": "./lib/coffeemill",
+  "main": "./tasks/grunt-coffeemill",
   "dependencies": {
     "coffeemill": "~0.7.0"
   },
