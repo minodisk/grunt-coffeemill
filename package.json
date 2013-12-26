@@ -1,0 +1,39 @@
+{
+  "name": "grunt-coffeemill",
+  "version": "0.0.0",
+  "keywords": [
+    "gruntplugin"
+  ],
+  "description": "CoffeeScript packager",
+  "tags": [
+    "coffeescript",
+    "package"
+  ],
+  "author": {
+    "name": "Daisuke Mino",
+    "email": "daisuke.mino@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://minodisk@github.com/minodisk/grunt-coffeemill.git"
+  },
+  "engines": {
+    "node": ">=0.9.0"
+  },
+  "license": "MIT",
+  "bin": {
+    "coffeemill": "./bin/coffeemill"
+  },
+  "main": "./lib/coffeemill",
+  "dependencies": {
+    "coffeemill": "~0.7.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-coffee": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-simple-mocha": "~0.4.0",
+    "grunt-release": "~0.6.0"
+  }
+}
