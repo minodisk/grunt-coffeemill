@@ -1,6 +1,6 @@
 var CoffeeMill;
 
-CoffeeMill = require('/Users/minodisk/workspace/coffeemill/lib/coffeemill').CoffeeMill;
+CoffeeMill = require('coffeemill').CoffeeMill;
 
 module.exports = function(grunt) {
   return grunt.registerMultiTask('coffeemill', function() {

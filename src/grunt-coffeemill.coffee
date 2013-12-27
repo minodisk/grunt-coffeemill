@@ -1,5 +1,4 @@
-#{ CoffeeMill } = require 'coffeemill'
-{ CoffeeMill } = require '/Users/minodisk/workspace/coffeemill/lib/coffeemill'
+{ CoffeeMill } = require 'coffeemill'
 
 module.exports = (grunt) ->
   grunt.registerMultiTask 'coffeemill', ->
