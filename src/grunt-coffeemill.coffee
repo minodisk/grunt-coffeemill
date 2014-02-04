@@ -12,7 +12,7 @@ module.exports = (grunt) ->
         grunt.fail.warn message
     .on 'error', (message) ->
         errorCount++
-        grunt.fail.fatal message
+        grunt.fail.warn message
     .on 'created', (filepath) ->
         grunt.log.writeln "File #{filepath.cyan} created"
     .on 'complete', (filenum) ->
