@@ -10,14 +10,14 @@ module.exports = function(grunt) {
     errorCount = 0;
     return new CoffeeMill(grunt.config('coffeemill')[this.target].options).on('warn', function(message) {
       warnCount++;
-      return grunt.fail.warn(message);
+      return grunt.log.write(message);
     }).on('error', function(message) {
       errorCount++;
-      return grunt.fail.fatal(message);
+      return grunt.log.error(message);
     }).on('created', function(filepath) {
-      return grunt.log.writeln("File " + filepath.cyan + " created");
+      return grunt.log.write("File " + filepath.cyan + " created");
     }).on('complete', function(filenum) {
-      grunt.log.writeln(("Done, with " + warnCount + " warns and " + errorCount + " errors.").green);
+      grunt.log.ok(("Done, with " + warnCount + " warns and " + errorCount + " errors.").green);
       return done();
     }).run();
   });

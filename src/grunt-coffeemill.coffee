@@ -9,13 +9,13 @@ module.exports = (grunt) ->
     new CoffeeMill(grunt.config('coffeemill')[@target].options)
     .on 'warn', (message) ->
         warnCount++
-        grunt.fail.warn message
+        grunt.log.write message
     .on 'error', (message) ->
         errorCount++
-        grunt.fail.warn message
+        grunt.log.error message
     .on 'created', (filepath) ->
-        grunt.log.writeln "File #{filepath.cyan} created"
+        grunt.log.write "File #{filepath.cyan} created"
     .on 'complete', (filenum) ->
-        grunt.log.writeln "Done, with #{warnCount} warns and #{errorCount} errors.".green
+        grunt.log.ok "Done, with #{warnCount} warns and #{errorCount} errors.".green
         done()
     .run()
